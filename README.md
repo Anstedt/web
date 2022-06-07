@@ -7,4 +7,6 @@ pip install flask
 python app.py 
   Works becasue app.py runs flask
 - app.py and templates/json.html allow a button to be created which
-  prints hello on the terminal you started app.py from
+  prints hello on the terminal you started app.py
+
+

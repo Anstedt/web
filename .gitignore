@@ -1,0 +1,9 @@
+*.~*~
+*.pyc
+Makefile
+CMakeCache.txt
+CMakeFiles
+.ninja_*
+*.ninja
+lib*
+cmake_install.cmake
