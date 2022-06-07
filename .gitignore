@@ -5,5 +5,6 @@ CMakeCache.txt
 CMakeFiles
 .ninja_*
 *.ninja
+*.tmp
 lib*
 cmake_install.cmake
