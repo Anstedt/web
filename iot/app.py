@@ -22,7 +22,7 @@ def on_publish(client,userdata,mid):   #create function for callback
   pass
 
 def on_disconnect(client, userdata, rc):
-  print("client disconnected ok") 
+  print("client disconnected ok")
 
 client= paho.Client("client-socks",transport='tcp')       #create client object
 client.on_subscribe = on_subscribe       #assign function to callback
@@ -31,7 +31,7 @@ client.on_message = on_message        #assign function to callback
 client.on_disconnect = on_disconnect
 print("connecting to broker ",broker,"on port ",port)
 client.connect(broker,port)           #establish connection
-# client.loop_start()
+client.loop_start()
 print("subscribing to ",sub_topic)
 client.subscribe(sub_topic)
 client.publish("clock","From The Web")    #publish
@@ -45,13 +45,13 @@ def home():
 @app.route('/ButtonOne')
 def ButtonOne():
     print('Printed From ONE')
-    client.publish("clock","Web Button ONE") 
+    client.publish("clock","Web Button ONE")
     return "Nothing"
 
 @app.route('/ButtonTwo')
 def ButtonTwo():
   print('Printed From TWO')
-  client.publish("clock","Web Button TWO") 
+  client.publish("clock","Web Button TWO")
   return "Nothing"
 
 #Keep the program running and print out the date time
