@@ -2,6 +2,9 @@ from flask import Flask, jsonify, render_template, request
 import paho.mqtt.client as paho
 import time
 
+button1cnt="0"
+button2cnt="0"
+
 broker="192.168.100.4"
 port=1883
 
@@ -53,12 +56,14 @@ def home():
 def ButtonOne():
   print('Printed From ONE')
   client.publish("clock","Web Button ONE")
+  # button1cnt += 1
   return "Nothing"
 
 @app.route('/ButtonTwo')
 def ButtonTwo():
   print('Printed From TWO')
   client.publish("clock","Web Button TWO")
+  # button2cnt += 1
   return "Nothing"
 
 if __name__ == "__main__":
