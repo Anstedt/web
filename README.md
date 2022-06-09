@@ -1,3 +1,11 @@
+# iot
+If client.loop_start() is called then there is a continuous connect and
+disconnect messages. But on_message() works since loop_start() runs a loop() in
+the background.
+
+For now default to using loop_start() but does cause logging on the
+server. Later we can figure out why this happens.
+
 # Web based code tools and examples
 # Flask Call Python Via Ajax
 Code in web/flask
@@ -17,6 +25,5 @@ Code in web/flask
 - sudo apt-get install mosquitto-clients
 $ mosquitto_sub -h "192.168.100.4" -d -t clock
 - pip install paho-mqtt
-
 
 # sudo npm install mqtt
