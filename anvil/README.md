@@ -12,3 +12,7 @@ I gave Anvil my public key for Git from ~/.ssh/id_rsa.pub
 
 /opt/git/Uplink was cloned using:
 git clone ssh://anstedt@gmail.com@anvil.works:2222/ZMM23X4XTKGC7OGH.git Uplink
+
+# Read CPU %, Temp, and RAM
+Anvil App: RP_CPU_TEMP
+https://Y7UC5RXVIBWVHS3V.anvil.app/LUWQDO3UMGNGKJSXC6VPP5E7
